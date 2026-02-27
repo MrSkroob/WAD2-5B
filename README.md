@@ -1,0 +1,13 @@
+# Getting started:
+We'll be using anaconda because university machines like it.
+### Creating the environment
+1. Open `Anaconda Prompt`
+2. `conda create -n topic python=3.11`
+3. `pip install pillow`
+4. `pip install django==2.2.28`
+## Getting the project
+5. Navigate to your working directory
+6. git clone the repositry.
+7. CD into the new folder.
+## Running the project:
+9. `python manage.py runserver` and open like `http://127.0.0.1:8000/` to check everything is running correctly.
