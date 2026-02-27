@@ -7,7 +7,7 @@ We'll be using anaconda because university machines like it.
 4. `pip install django==2.2.28`
 ## Getting the project
 5. Navigate to your working directory
-6. git clone the repositry.
+6. git clone the repository.
 7. CD into the new folder.
 ## Running the project:
 9. `python manage.py runserver` and open like `http://127.0.0.1:8000/` to check everything is running correctly.
