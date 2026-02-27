@@ -11,3 +11,14 @@ We'll be using anaconda because university machines like it.
 7. CD into the new folder.
 ## Running the project:
 9. `python manage.py runserver` and open link `http://127.0.0.1:8000/` to check everything is running correctly.
+# Housekeeping:
+- Please commit as often as possible.
+```
+git add *
+git commit -m "commit message"
+git push
+```
+- Follow PEP when you can (snake_case for most things, CONSTANT_CASE for constants, PascalCase for classes)
+- Test everything! Take a look at the Django testing code for some templates. 
+- If you have some naming conventions/code styling of in your branches, please add them to this readme.
+- 
