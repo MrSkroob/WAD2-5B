@@ -14,12 +14,8 @@ venv/
 ENV/ 
 env.bak/ 
 venv.bak/
-*.conda
+.conda
 
 # Visual Studio Code # 
-.vscode/* 
-!.vscode/settings.json 
-!.vscode/tasks.json 
-!.vscode/launch.json 
-!.vscode/extensions.json 
+.vscode
 .history
