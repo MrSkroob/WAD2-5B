@@ -13,7 +13,8 @@ env/
 venv/ 
 ENV/ 
 env.bak/ 
-venv.bak/ 
+venv.bak/
+*.conda
 
 # Visual Studio Code # 
 .vscode/* 
