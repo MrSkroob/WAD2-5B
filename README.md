@@ -1,6 +1,6 @@
 # Getting started:
 We'll be using anaconda because university machines like it.
-### Creating the environment
+## Creating the environment
 1. Open `Anaconda Prompt`
 2. ```conda create -n topic python=3.11```
 3. ```pip install pillow```
@@ -22,4 +22,3 @@ git push
 - Follow PEP when you can (snake_case for most things, CONSTANT_CASE for constants, PascalCase for classes)
 - Test everything! Take a look at the Django testing code for some templates. 
 - If you have some naming conventions/code styling of in your branches, please add them to this readme.
-- 
