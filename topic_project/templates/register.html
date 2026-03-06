@@ -3,19 +3,29 @@
 {% extends 'main-base.html' %}
 {% load static %}
 
+
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/register_login.css' %}">
+{% endblock %}
+
+
 {% block body_block %}
-<h1> Register for Topic - your home for all learning tools!  </h1>
-{% if registered %}
-<strong> Thank you for registering! </strong>
-{% else %}
-<form id="user_form" method="post" action="{% url 'topic:register' %}"
-        enctype="multipart/form-data">
+<div class = "container">
+    <div class = "wrapper">
+        <h1> Register for Topic - your home for all learning tools!  </h1>
 
-    {% csrf_token %}
-    {{ user_form.as_p }}
-    
-    <input type="submit" name="submit" value="Register" />
-</form>
-{% endif %}
-
+        {% if registered %}
+            <div class="message">
+                <strong> Thank you for registering! </strong>
+            </div>
+        {% else %}
+            <form id="user_form" class="form" method="post" action="{% url 'topic:register' %}">
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                <input type="submit" name="submit" value="Register" />
+            </form>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
