@@ -1,6 +1,25 @@
 header {
     height: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: burlywood;
     line-height: 1.5;
     padding: 4vw;
+}
+
+
+.logo.home-page {
+    width: 20vw;
+    background-color: deeppink;
+    text-align: center;
+}
+
+
+/* Scroll bar shenanigans */
+#categories {
+    text-align: center;
+}
+#categories p {
+    padding: 1vw;
 }
