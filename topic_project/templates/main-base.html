@@ -10,8 +10,11 @@
 <!-- Announcements -->
 {% if announcement %}
     <div id="announcements" class="center banner">
+        <button class = "align-left">x</button>
         {{ announcement }}
     </div>
+    <!-- I think if you load it here it'll guarantee that it'll find announcements? -->
+    <script src="{% static 'js/close_announcement.js' %}"></script>
 {% endif %}
 <!-- Top bar -->
 <div id="topbar" class="center banner">
