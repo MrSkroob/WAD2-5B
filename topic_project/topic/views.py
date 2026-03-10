@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest, JsonResponse
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import UserProfile, EmailVerification
 from .forms import UserForm
@@ -23,6 +25,29 @@ def index(request: HttpRequest) -> HttpResponse:
 
 # def test(request: HttpRequest):
     
+# simple login and logout code
+
+def user_login(request: HttpRequest) -> HttpResponse:
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            messages.success(request, f"Welcome back, {username}!")
+            return redirect('topic:home')
+        else:
+            messages.error(request, "Invalid username or password.")
+    return render(request, "login.html")
+
+
+@login_required
+def user_logout(request: HttpRequest) -> HttpResponse:
+    logout(request)
+    messages.success(request, "You have been logged out successfully.")
+    return redirect('topic:home')
 
 # starting register path, takes in the users inputs
 # after being checked by the js code
@@ -87,11 +112,7 @@ def verify_email(request: HttpRequest) -> HttpResponse:
             verification.delete()
             request.session.flush()
             messages.success(request, "Registration complete! You can now log in.")
-
-            # change back to this when login is created
-            # return redirect("topic:login")
-
-            return redirect("topic:home")
+            return redirect("topic:login")
         
         except EmailVerification.DoesNotExist:
             messages.error(request, 'Invalid verification code')

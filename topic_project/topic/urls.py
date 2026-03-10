@@ -10,4 +10,6 @@ urlpatterns = [
     path("register/resend/", views.resend_code, name="resend_code"),
     path("register/check-username/", views.check_username, name = "check_username"),
     path("register/check-email/", views.check_email, name = "check_email"),
+    path("login/", views.user_login, name="login"),
+    path("logout/", views.user_logout, name="logout"),
 ]
