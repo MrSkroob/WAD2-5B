@@ -23,7 +23,7 @@ def index(request: HttpRequest) -> HttpResponse:
 
 
 
-def register(request):
+def register(request: HttpRequest) -> HttpResponse:
     registered = False
     if request.method == 'POST':
         user_form = UserForm(request.POST)
