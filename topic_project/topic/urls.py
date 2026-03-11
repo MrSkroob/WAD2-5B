@@ -1,5 +1,5 @@
 from django.urls import path
-from topic import views
+from topic_project.topic import views
 
 app_name = "topic"
 

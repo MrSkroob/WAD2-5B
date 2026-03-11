@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'topic'
+    'topic_project.topic'
 ]
 
 MIDDLEWARE = [
@@ -74,7 +74,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'topic_project.urls'
+ROOT_URLCONF = 'topic_project.topic_project.urls'
 
 
 class Templates(TypedDict):
@@ -100,7 +100,7 @@ TEMPLATES: list[Templates] = [
     },
 ]
 
-WSGI_APPLICATION = 'topic_project.wsgi.application'
+WSGI_APPLICATION = 'topic_project.topic_project.wsgi.application'
 
 
 # Database
