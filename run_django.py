@@ -1,26 +1,22 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""
+Interface for the wsgi.py file
+"""
+
+"""
+Why are we not using wsgi directly? It's because of weird importing shenanigans involved when trying 
+to import settings. It sets the current path to whatever the wsgi.py path is which means Python will struggle
+to find the topic app which is both a level above and in an adjacent directory.
+
+Solution?
+We call the application from here, so all the directories would be BELOW this one. 
+"""
+
+
 import os
-# import sys
 
-
-# def main():
-#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'topic_project.topic_project.settings')
-#     try:
-#         from django.core.management import execute_from_command_line
-#     except ImportError as exc:
-#         raise ImportError(
-#             "Couldn't import Django. Are you sure it's installed and "
-#             "available on your PYTHONPATH environment variable? Did you "
-#             "forget to activate a virtual environment?"
-#         ) from exc
-#     execute_from_command_line([os.path.abspath(__file__), 'runserver'])
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'topic_project.topic_project.settings')
 
 from topic_project.topic_project.wsgi import application
 
 application = application
-
-
-# if __name__ == '__main__':
-#     main()
