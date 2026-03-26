@@ -19,6 +19,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'topic_project.topic_project.set
 
 from topic_project.topic_project.wsgi import application
 
+application = application
+
 
 # if __name__ == '__main__':
 #     main()
