@@ -47,7 +47,7 @@ EMAIL_PASSWORD = "98127y30891nhoihno87rqnym98-r cmsdkldak;"
 SECRET_KEY = 'lr&dmwfnw_rbs2&y8on-cshs-lzio^u-i=1t5m%_d-75x9b$p5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["skrunkler.pythonanywhere.com"]
 
