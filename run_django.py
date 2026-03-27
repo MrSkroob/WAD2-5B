@@ -11,12 +11,13 @@ to find the topic app which is both a level above and in an adjacent directory.
 Solution?
 We call the application from here, so all the directories would be BELOW this one. 
 """
-
-
 import os
+
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'topic_project.topic_project.settings')
 
+
 from topic_project.topic_project.wsgi import application
+
 
 application = application
