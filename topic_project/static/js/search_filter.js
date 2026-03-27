@@ -129,6 +129,7 @@ function search(event) {
 // initial load
 httpGetAsync("/topic/home/get_tags", populateDivBar);
 updatePageButtons(0);
+httpGetAsync(formatSearchURL("", RESULTS_PER_PAGE * currentPage), updateResults);
 
 rightArrowButton.addEventListener("click", () => pageButtonClick(currentPage + 1));
 leftArrowButton.addEventListener("click", () => pageButtonClick(currentPage - 1));
