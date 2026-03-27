@@ -22,3 +22,4 @@ venv.bak/
 
 # Tests
 test_config.py
+tests.py
