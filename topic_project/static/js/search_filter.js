@@ -29,13 +29,22 @@ function populateDivBar(categories) {
         buttons.push(button);
 
         // default state
+        const offColour = "#e6e6e6";
+        const onColour = "#ffff83";
+
         let toggledOn = true;
         filtersApplied[value] = true;
-        button.style.opacity = "1";
+        button.style.backgroundColor = onColour;
+        // button.style.opacity = "1";
 
         // toggle behaviour
         button.addEventListener("click", () => {
-            window.location.href = `/topic/tag/${value}`;
+            // window.location.href = `/topic/tag/${value}`;
+            toggledOn = !toggledOn;
+            filtersApplied[value] = toggledOn;
+            button.style.backgroundColor = toggledOn? onColour : offColour;
+            // button.style.opacity = toggledOn ? "1" : "0";
+            updateResults(cachedResults);
         });
 
     }

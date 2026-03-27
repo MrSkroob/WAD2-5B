@@ -4,29 +4,26 @@
 {% block body_class %}home-page{% endblock %}
 
 {% block stylesheets %}
-    {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'styles/home.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body_block %}
 <div class="home-container">
-    <img src="{% static 'images/topiclogo.png' %}" alt="homepage">
+
+    <!-- <img src="{% static 'images/topiclogo.png' %}" alt="homepage"> -->
 
     <p>Hello, academic weapon!</p>
     <p>Welcome to TOPIC — your go-to place for help.</p>
-
-    <div class="web-description">
-        <p>TOPIC is a website designed by students, for students.</p>
-        <p>On here, you're able to find help with specific problems, upload and rate study tools, and find the help you need.</p>
-    </div>
 
     <div class="search-box">
         <input type="search" placeholder="Search for topics…">
     </div>
 
-    <div id="search-filter" class="center">
-        <p style="padding: 0.4rem">Filter by tag: </p>
+    <div id="search-filter">
+        <p>Filter by tag:</p>
     </div>
 
     <div id="pagination" class="center">
@@ -37,7 +34,11 @@
 
     <ul id="results"></ul>
 
-    <!-- script at the very end -->
+    <div class="web-description">
+        <p>TOPIC is a website designed by students, for students.</p>
+        <p>On here, you're able to find help with specific problems, upload and rate study tools, and find the help you need.</p>
+    </div>
+
     <script src="{% static 'js/search_filter.js' %}" type="module"></script>
 </div>
 {% endblock %}

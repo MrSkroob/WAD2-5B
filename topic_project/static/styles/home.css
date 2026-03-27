@@ -1,110 +1,74 @@
-/* Notebook background */
-body.home-page {
-    background: repeating-linear-gradient(
-        to bottom,
-        #ffffff 0px,
-        #ffffff 22px,
-        #cfe0ff 22px,
-        #cfe0ff 23px
-    );
-    font-family: "Patrick Hand", cursive;
-    position: relative;
-}
-
-/* Notebook margin line */
-body.home-page::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 150px;
-    width: 5px;
-    height: 100%;
-    background-color: #ff4d4d;
-    z-index: 5;
-    pointer-events: none;
-}
-
-/* Natural flow — content sits under banners */
 body.home-page main {
-    display: block;
-    padding-top: 4rem;
+    padding-top: 5rem;
 }
 
-/* Home container */
 .home-container {
-    position: relative;
-    z-index: 1;
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 1rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
     text-align: center;
 }
 
-/* Search box */
+.home-container img {
+    margin-bottom: 2rem;
+}
+
 .search-box input {
     width: 60%;
     padding: 0.4rem 1rem;
     border: 2px solid #888;
     border-radius: 8px;
     font-size: 1.2rem;
-    font-family: "Patrick Hand", cursive;
+    font-family: "Courier Prime", monospace;
     background-color: #fff;
 }
 
-/* Sticky‑note style tag buttons */
+#search-filter {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.4rem;
+}
+
 #search-filter button {
     padding: 0.6rem 1rem;
-    border: 2px solid #d4c46a;
+    border: 2px solid #b5b5b5;
     border-radius: 4px;
     cursor: pointer;
-    font-family: "Patrick Hand", cursive;
+    font-family: "Courier Prime", monospace;
     font-size: 1.1rem;
-
-    background: #fff3a3; /* default pastel yellow */
-
-    /* grey sticky-note shadow */
-    box-shadow: 3px 3px 0px #bfbfbf,
-                0px 0px 8px rgba(0,0,0,0.15);
-
-    transform: rotate(-1.5deg);
+    /* background: #e6e6e6; */
+    box-shadow: 3px 3px 0px #bfbfbf;
     transition: all 0.15s ease;
 }
 
-/* Slight random tilt for variety */
-#search-filter button:nth-child(odd) {
-    transform: rotate(1.5deg);
-}
-
-/* Hover effect: lift like a real sticky note */
 #search-filter button:hover {
-    transform: scale(1.07) rotate(0deg);
-    box-shadow: 4px 6px 0px #bfbfbf,
-                0px 0px 12px rgba(0,0,0,0.25);
+    /* background: #ffff83; */
+    border-color: #dada9d;
+    transform: rotate(-1.5deg);
+    box-shadow: 3px 3px 0px #a0a0a0;
 }
 
-/* Pressed effect */
-#search-filter button:active {
-    transform: scale(0.97);
-    box-shadow: 2px 3px 0px #9e9e9e;
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
-/* Pastel sticky‑note colours */
-#search-filter button:nth-child(1n) { background: #fff3a3; } /* yellow */
-#search-filter button:nth-child(2n) { background: #ffd6e0; } /* pink */
-#search-filter button:nth-child(3n) { background: #d7f9ff; } /* blue */
-#search-filter button:nth-child(4n) { background: #e7ffd9; } /* green */
-#search-filter button:nth-child(5n) { background: #fbe4ff; } /* purple */
-
-
-/* Results list */
 #results {
     list-style: none;
     padding: 0;
+    margin-top: 1rem;
+    font-family: "Courier Prime", monospace;
 }
 
 #results li {
-    min-width: 35vw;
     font-size: 1.4rem;
-    margin: 0.6vw auto;
+    margin: 0.6rem auto;
     display: table;
+}
+
+.web-description {
+    margin-top: 2rem;
+    font-size: 1.1rem;
 }
