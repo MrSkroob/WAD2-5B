@@ -77,3 +77,10 @@ body::before {
     background-color: #ff4d4d;
     z-index: -1;
 }
+
+#logo {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    width: 25%;
+}

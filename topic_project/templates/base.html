@@ -18,20 +18,12 @@
     {% block banner_block %}{% endblock %}
 
     {% if body_class == "login-page" or body_class == "register-page" %}
-    <div class="topic-logo-container">
-        <img src="{% static 'images/topic_logo.png' %}" class="topic-logo" alt="Topic Logo">
-    </div>
+    <img src="{% static 'images/topic_logo.png' %}" class="topic-logo" alt="Topic Logo">
     {% endif %}
 
     <main>
         {% block base_body_block %}{% endblock %}
     </main>
-
-    <footer>
-        Hello, this is a footer <br>
-        About
-    </footer>
-
     {% block scripts %}{% endblock %}
 </body>
 </html>
