@@ -37,15 +37,15 @@ body.home-page main {
     cursor: pointer;
     font-family: "Courier Prime", monospace;
     font-size: 1.1rem;
-    background: #e6e6e6;
+    /* background: #e6e6e6; */
     box-shadow: 3px 3px 0px #bfbfbf;
-    transform: rotate(-1.5deg);
     transition: all 0.15s ease;
 }
 
 #search-filter button:hover {
-    background: #ffff83;
+    /* background: #ffff83; */
     border-color: #dada9d;
+    transform: rotate(-1.5deg);
     box-shadow: 3px 3px 0px #a0a0a0;
 }
 
