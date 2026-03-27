@@ -5,7 +5,6 @@ from random import randint
 
 
 def send_verification_email(email: str) -> str:
-
     new_code = f"{randint(100000, 999999)}"
     verification, created = EmailVerification.objects.update_or_create( email = email, defaults = {"code": new_code})
     # to remove the annoying pylance error
