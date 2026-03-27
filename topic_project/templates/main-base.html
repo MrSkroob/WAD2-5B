@@ -26,15 +26,15 @@
 </div>
 
 {% if body_class == "login-page" or body_class == "register-page" %}
-<div class="logo-under-banner">
-    <img src="{% static 'images/topiclogo.png' %}" alt="Topic Logo">
-</div>
+<!-- <img src="{% static 'images/topiclogo.png' %}" alt="Topic Logo"> -->
+<!-- <div class="logo-under-banner">
+    
+</div> -->
 {% endif %}
 
 {% endblock %}
 
 {% block base_body_block %}
-<img src="{% static 'images/topiclogo.png' %}" alt="homepage" id="logo" class="center">
 {% block body_block %}{% endblock %}
 {% endblock %}
 

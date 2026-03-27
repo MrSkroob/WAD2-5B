@@ -17,10 +17,7 @@
 
     {% block banner_block %}{% endblock %}
 
-    {% if body_class == "login-page" or body_class == "register-page" %}
-    <img src="{% static 'images/topic_logo.png' %}" class="topic-logo" alt="Topic Logo">
-    {% endif %}
-
+    <a href="{% url 'topic:home' %}"><img src="{% static 'images/topiclogo.png' %}" class="topic-logo" alt="Topic Logo"></a>
     <!-- <main> -->
     {% block base_body_block %}{% endblock %}
     <!-- </main> -->
