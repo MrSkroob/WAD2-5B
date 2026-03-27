@@ -25,3 +25,6 @@ git push
 - Follow PEP when you can (snake_case for most things, CONSTANT_CASE for constants, PascalCase for classes)
 - Test everything! Take a look at the Django testing code for some templates. 
 - If you have some naming conventions/code styling of in your branches, please add them to this readme.
+## Running tests:
+1. Install: https://github.com/mozilla/geckodriver/releases
+2. `python tests.py`
