@@ -216,7 +216,7 @@ def get_search_results(request: HttpRequest) -> JsonResponse:
         outputdata.append({
             "name": i.name,
             "url": i.link,
-            "review_slug": "topic/tools/" + i.slug,
+            "review_slug": "/topic/tools/" + i.slug,
             "tags": [j.name for j in i.tags.all()]
         })
 

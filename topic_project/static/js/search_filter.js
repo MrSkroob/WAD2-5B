@@ -15,7 +15,7 @@ let cachedResults = {
 };
 
 function formatSearchURL(request, offset) {
-    return `topic/home/get_search_results?request=${request}&offset=${offset}`;
+    return `get_search_results?request=${request}&offset=${offset}`;
 }
 
 function populateDivBar(categories) {
@@ -35,15 +35,12 @@ function populateDivBar(categories) {
         let toggledOn = true;
         filtersApplied[value] = true;
         button.style.background = onColour;
-        // button.style.opacity = "1";
 
         // toggle behaviour
         button.addEventListener("click", () => {
-            // window.location.href = `/topic/tag/${value}`;
             toggledOn = !toggledOn;
             filtersApplied[value] = toggledOn;
             button.style.background = toggledOn? onColour : offColour;
-            // button.style.opacity = toggledOn ? "1" : "0";
             updateResults(cachedResults);
         });
 
