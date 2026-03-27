@@ -49,7 +49,7 @@ SECRET_KEY = 'lr&dmwfnw_rbs2&y8on-cshs-lzio^u-i=1t5m%_d-75x9b$p5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["skrunkler.pythonanywhere.com"]
+ALLOWED_HOSTS = ["skrunkler.pythonanywhere.com", "127.0.0.1"]
 
 
 # Application definition

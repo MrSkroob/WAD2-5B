@@ -43,7 +43,7 @@ def addtool(request):
             print(form.errors)
             
     context = {'form': form}
-    return render(request, 'topic/addtool.html', context=context)
+    return render(request, 'addtool.html', context=context)
     
 
 # def test(request: HttpRequest):
