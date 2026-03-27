@@ -23,7 +23,7 @@ class TestContext(TypedDict):
 # Create your views here.
 def index(request: HttpRequest) -> HttpResponse:
     context_dict: TestContext = {
-        "announcement": "Hello world!"
+        "announcement": "This is a test announcement!"
     }
 
     return render(request, "home.html", context=context_dict)
