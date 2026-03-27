@@ -34,7 +34,7 @@ function populateDivBar(categories) {
 
         let toggledOn = true;
         filtersApplied[value] = true;
-        button.style.backgroundColor = onColour;
+        button.style.background = onColour;
         // button.style.opacity = "1";
 
         // toggle behaviour
@@ -42,7 +42,7 @@ function populateDivBar(categories) {
             // window.location.href = `/topic/tag/${value}`;
             toggledOn = !toggledOn;
             filtersApplied[value] = toggledOn;
-            button.style.backgroundColor = toggledOn? onColour : offColour;
+            button.style.background = toggledOn? onColour : offColour;
             // button.style.opacity = toggledOn ? "1" : "0";
             updateResults(cachedResults);
         });
