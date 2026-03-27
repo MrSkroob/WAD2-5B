@@ -11,8 +11,10 @@ We'll be using anaconda because university machines like it.
 7. ```git clone "https://github.com/MrSkroob/WAD2-5B"```
 8. CD into the new WAD2-5B.
 ## Running the project:
-9. CD into the `topic` folder. 
-10. `python manage.py runserver` and open link `http://127.0.0.1:8000/` to check everything is running correctly.
+9. `python manage.py makemigrations`
+10. `python populate_topic.py`
+11. CD into the `topic` folder. 
+12. `python manage.py runserver` and open link `http://127.0.0.1:8000/` to check everything is running correctly.
 # Housekeeping:
 - Please commit as often as possible.
 ```
