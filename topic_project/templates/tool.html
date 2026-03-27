@@ -13,6 +13,7 @@
 
 {% block body_block %}
 {% if tool %}
+<div style="margin-left: 180px;">
     <h1>{{ tool.name }}</h1>
     <p>{{ tool.description }}</p>
     <h2><a href={{ tool.link }} target="_blank">Visit Site</a></h2>
@@ -40,7 +41,8 @@
 
     <p>Average Rating: {{ tool.average_score }}</p>
 
-    <a href="{%url 'topic:add_review' tool.slug %}">Review</a>
+    <h2><a href="{%url 'topic:add_review' tool.slug %}">Review</a></h2>
+</div>
 {% else %}
     The specified tool does not exist.
 {% endif %}

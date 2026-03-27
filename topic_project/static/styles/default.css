@@ -74,9 +74,9 @@ body::before {
     z-index: -1;
 }
 
-#logo {
+.topic-logo {
     max-width: 700px;
     display: block;
-    margin: auto;
-    width: 25%;
+    margin: 1vw auto;
+    width: 20%;
 }
