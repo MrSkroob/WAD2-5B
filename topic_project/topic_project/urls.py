@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from topic_project.topic import views
 from django.urls import URLPattern, URLResolver
+from django.views.generic.base import RedirectView
 
 urlpatterns: list[URLPattern | URLResolver] = [
-    path('', views.index, name='home'),
+    # redirect because EVERYTHING BREAKS if the URL is not topic/home
+    path('', RedirectView.as_view(pattern_name="home")),
+    path('topic/home/', views.index, name='home'),
     path('admin/', admin.site.urls),
     path("topic/", include("topic_project.topic.urls")),
 ]
