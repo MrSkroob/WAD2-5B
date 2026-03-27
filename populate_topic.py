@@ -10,21 +10,8 @@ django.setup()
 from topic_project.topic.models import LearningTool, Review, Tag
 from django.contrib.auth.models import User
 
-def populate():
-    print("starting the topic population script...")
-    
-    # first, let's make a fake user to own these tools since the database requires a creator
-    # get_or_create means it won't crash if we run this script twice!
-    dummy_user, created = User.objects.get_or_create(username='admin_syon', email='admin@topic.com')
-    if created:
-        dummy_user.set_password('neon_highlighter123')
-        dummy_user.save()
 
-    # tags = LearningTool.CATEGORIES
-
-    # a list of dictionaries with some starter tools to save us typing them all out on the site
-
-    tools = [
+TOOLS = [
         {
             'name': 'Quizlet',
             'description': 'the absolute classic flashcard app for memorizing definitions and terms before an exam.',
@@ -75,6 +62,21 @@ def populate():
             'score': 5.0
         }
     ]
+
+
+def populate():
+    print("starting the topic population script...")
+    
+    # first, let's make a fake user to own these tools since the database requires a creator
+    # get_or_create means it won't crash if we run this script twice!
+    dummy_user, created = User.objects.get_or_create(username='admin_syon', email='admin@topic.com')
+    if created:
+        dummy_user.set_password('neon_highlighter123')
+        dummy_user.save()
+
+    # tags = LearningTool.CATEGORIES
+
+    # a list of dictionaries with some starter tools to save us typing them all out on the site
 
 
     reviews = [
@@ -192,7 +194,7 @@ def populate():
 
     # now we loop through our list and actually inject them into the database
 
-    for tool_data in tools:
+    for tool_data in TOOLS:
         t = add_tool(tool_data, dummy_user)
         print(f"successfully added tool: {t.name} with tags {t.tags}")
 
